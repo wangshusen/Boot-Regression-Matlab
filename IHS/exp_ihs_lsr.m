@@ -1,4 +1,4 @@
-function exp_ihs_lsr(filename, sketch, s, numBoot)
+function exp_ihs_lsr(filename, sketch, sketchsize, numBoot)
 % input
 % A: n-by-d1 matrix where n >> d
 % sketch: either 'gaussian' or 'srht' or 'sampling'
@@ -24,8 +24,8 @@ coverage50 = zeros(tMax, numRepeat);
 % ------------------- Precompute ------------------- %
 ab = A' * b;
 wopt = A \ b;
-outputFileName = ['ihs_', dataname, '_', sketch , '_', int2str(s), '.mat'];
-
+outputFileName = ['ihs_', dataname, '_', sketch , '_', int2str(sketchsize), '.mat'];
+s = d * sketchsize;
 
 
 % ------------------- Algorithm ------------------- %
