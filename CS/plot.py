@@ -3,11 +3,11 @@ import matplotlib.pyplot as plt
 import scipy.io
 
 
-#sketch = 'SRFT';
-sketch = 'count';
+sketch = 'SRFT';
+#sketch = 'count';
 #sketch = 'Gaussian';
 #sketch = 'Sampling';
-dataname = 'NG'
+dataname = 'cp'
 quan = 95;
 norm = "l2"
 #norm = 'infty'
