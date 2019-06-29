@@ -1,4 +1,4 @@
-function exp_ihs_ridge(filename, sketch, sketchsize, numBoot)
+function exp_ihs_ridge(filename, sketch, sketchsize, numBoot, lam)
 % input
 % A: n-by-d1 matrix where n >> d
 % sketch: either 'gaussian' or 'srht' or 'sampling'
@@ -7,8 +7,6 @@ function exp_ihs_ridge(filename, sketch, sketchsize, numBoot)
 load(filename);
 dataname = filename(1:2);
 [n, d] = size(A);
-
-lam = 1; % cpusmall and msd
 
 A = [A; eye(d) * sqrt(lam)];
 b = [b; zeros(d, 1)];
