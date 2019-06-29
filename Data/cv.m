@@ -1,7 +1,7 @@
 function [results] = cv(A, b, n_train)
 
 repeat = 100;
-lambdas = [1E-3; 1E-2; 1E-2; 1E0; 1E1; 1E2; 1E3];
+lambdas = [1E-3; 1E-2; 1E-1; 1E0; 1E1; 1E2; 1E3];
 
 errors = zeros(length(lambdas), repeat);
 

@@ -1,4 +1,4 @@
-function exp_cs_krr(filename, sketch, sigma, s)
+function exp_cs_krr(filename, sketch, sigma, s, lam)
 % input
 % A: n-by-d1 matrix where n >> d
 % sketch: either 'gaussian' or 'srht' or 'sampling'
@@ -12,7 +12,6 @@ dataname = filename(1:2)
 A = rfm(A, d*s, sigma); 
 [n, d] = size(A);
 
-lam = 1; % cpusmall dataset
 
 A = [A; eye(d) * sqrt(lam)];
 b = [b; zeros(d, 1)];

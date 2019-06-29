@@ -6,7 +6,7 @@ import scipy.io
 sketch = 'SRFT';
 #sketch = 'Gaussian';
 #sketch = 'Sampling';
-dataname = 'cp'
+dataname = 'GP'
 quan = 95;
 norm = "l2"
 #norm = 'infty'
