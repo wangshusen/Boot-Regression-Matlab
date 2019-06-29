@@ -1,4 +1,4 @@
-function exp_cs_ridge(filename, sketch)
+function exp_cs_ridge(filename, sketch, lam)
 % input
 % A: n-by-d1 matrix where n >> d
 % sketch: either 'gaussian' or 'srht' or 'sampling'
@@ -7,8 +7,6 @@ function exp_cs_ridge(filename, sketch)
 load(filename);
 dataname = filename(1:2)
 [n, d] = size(A);
-
-lam = 1; % cpusmall dataset
 
 A = [A; eye(d) * sqrt(lam)];
 b = [b; zeros(d, 1)];
