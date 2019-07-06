@@ -12,7 +12,7 @@ dataname = filename(1:2)
 % ------------------- Parameters ------------------- %
 numBoot = 20;  %%%%%%%%%%%%% can be tuned
 numRepeat = 1000;  %%%%%%%%%%%%% can be tuned
-tList = ceil([5*d : d: 30*d]);%%%%%%%%%%%%% real data
+tList = ceil([10*d : d: 30*d]);%%%%%%%%%%%%% real data
 tMax = max(tList);
 
 % ------------------- Precompute ------------------- %
